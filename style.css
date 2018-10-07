@@ -16,8 +16,9 @@
    License: none (public domain)
 */
 
-html, body, div, a, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -28,7 +29,10 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -325,6 +329,8 @@ html {
   box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 img,
@@ -1586,7 +1592,7 @@ a.box:active {
 }
 
 .button--ruby {
-  background-color: #DC143C !important;
+  background-color: #D71149 !important;
   color: #FFFFFF !important;
 }
 
@@ -6625,6 +6631,7 @@ body.has-navbar-fixed-bottom {
   padding-bottom: 3.25rem;
 }
 
+.navbar-brand,
 .navbar-tabs {
   align-items: stretch;
   display: flex;
@@ -9759,7 +9766,6 @@ label.panel-block:hover {
 .u-mrgn--top-s { margin-top: 5rem !important }
 .u-mrgn--top-m { margin-top: 7rem !important }
 .u-mrgn--top-xl { margin-top: 10rem !important }
-.u-mrgn--top-xxl { margin-top: 20rem !important }
 
 .u-mrgn--bottom { margin-bottom: .25rem !important }
 .u-mrgn--bottom-1 { margin-bottom: .5rem !important }
@@ -9812,10 +9818,14 @@ label.panel-block:hover {
 .is-borderless { border: none !important }
 
 .u-color--ruby {
-  color: #DC143C;
+  color: #D71149;
 }
 .u-bg-color--mustard {
   color: #FFC53E;
+}
+
+.navbar-brand {
+  margin-left: 0 !important;
 }
 
 .u-vertical-centered {
@@ -9829,12 +9839,12 @@ label.panel-block:hover {
 
 ::-moz-selection {
   color: #FFFFFF;
-  background: black;
+  background: #FF566A;
 }
 
 ::selection {
-  color: #DC143C;
-  background: #DC143C;
+  color: #FFFFFF;
+  background: #FF566A;
 }
 
 body {
@@ -9881,7 +9891,7 @@ body {
 }
 
 a.navbar-item:hover {
-  color: #ffcc00 !important;
+  color: #D71149 !important;
 }
 
 .bukabeasiswa-small {
@@ -9913,7 +9923,7 @@ a.navbar-item:hover {
 .subheading {
   font-size: .75rem;
   text-transform: uppercase;
-  color: #DC143C;
+  color: #D71149;
 }
 
 .subheading:before {
@@ -9948,7 +9958,7 @@ a.navbar-item:hover {
 }
 
 .tab-nav a.selected {
-  color: #DC143C
+  color: #D71149;
 }
 
 .tab-nav .magic-box {
@@ -9985,7 +9995,7 @@ a.navbar-item:hover {
   content: "";
   width: 12px;
   height: 9px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH0SURBVGhD7dhPSBRxFMDxldKsSKiDFwlMsIN6EaFIvQQdhC6K524KnvQkXQURBBERDIwItEMn8WbHOmWXBA+RUkGkEiQWEiKaf79PXPjx47XOtM7um/h94XNw2GXe2x2c3c2EQqFQKM+uYQTTaJEDaawEczg6dYAxXEaq6kZ2CdcS7iIV3cJvaIuIXTTDdHJJvYG2gGsCpuuDNrivB2a7jW1og7ve4yJMdgHz0AZ37aAeZnsMbXBfP8zWAHmltcFdbyHvnMlKsQBtcNcWamG2AWiD+3phtib8gTa46zXk/mKyS/gAbXCX3OGrYbZhaIP7umC2e9iHNrjrFcxeUlfwCdrgrl+oQmLdhNyU2k/+it84tMF9j5BYjdhA9mSTiPPW38ch3IE1s0gsf4msp4iyjHxt/Qr/+b51VCKRZImf0E4soizzDNpzfZ1IJPmOvArtpK5cy7QhyiX1EolVB+2kGm2Z61iD9njXd9xAYpVhGdrJNf4yL6A9zvcQiVeDFWgDaLLLdDjHcnmOghV3mSn88I5pvqECBS3uMmeRfwAPUJTOc5knKGrnscwXXEXRy2cZ+eTbCjP96zKjMFfcZT6iHCaLuswe7sB0UZYZRCrKtcwi5ONOapJlPsNdYhOmf6/9W3J/GMI7zEB+Eg2FQqHQ/1wmcwyYwLcPtgh5KQAAAABJRU5ErkJggg==") no-repeat;
+  background: url("https://scholarship.bukalapak.com/wp-content/uploads/2018/05/check.png") no-repeat;
   background-size: 12px 9px;
 }
 
@@ -9995,7 +10005,7 @@ a.navbar-item:hover {
   content: "";
   width: 16px;
   height: 10px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMmSURBVGhD7dlbqExRHMfxcafc77mUIiFFhERJKRRePChKUjzw4EEpUpSiKBHlAQ+K3IpSeFESh3KNUu535Zr7Ldfvb9tr2mf1n5m997ntqf2rT86s+c+Z8z9n5r/WHoU8efLkyZOFtMNULMLijJqN7iiZpXiHv1XgJ7ahLWplI6wHZN0ZtEaQKbCKqsUaBDkGq6BavEYLFN6EC9VsKIIvvuEcPoW3s+43avA2vD0RxTt/YSt2QFPBrWfNSaxC9JVUqxHnKEbjMP6Ea1lwCRpMa6G/SPQ+sxG5g+EYh9PhWlO5iznQJngiXPOVbEQ+Yx6U6bgOq66hvMASaJ8YhQew6qRsI4520FZojvl4DKuuvmjgaG9oD2UhNIysWidWI3IefaG0wXJoflu1af3AdvSEouPHLli1vtiNyEtMhktnrMdXWPVxaaDsxyC4DMBlWPWWRI2IxvIKNINLH+xEmpF9CpqQ0UxD0k06cSPOEXRENMOgdavedxW6XIhG70G9N/zRGkfqRuQ2NKL9jMdZWI/R5JkL/dDRdMVxWI+Jo06NyC0Uj9FeZuEmVKfBsAylavfA/95J1KkRzfkhKBedSmfCfxn66YAaWM8TR+pGXiH6smqJldDGGSf6BWxCl+DW/3TCRVjPV0mqRnTiHAEXjUqdnN39e9EDVrSxrsZ3qPYJ/JF+Be57xZW4kfeIjksdYT7Ar9NfzB1vXMbiBvxaTakNUJOKzlRJj0OJGlETOkQqehnsg1UXpUOeLno2Q5cJVo2jDXAwFP1F3aCII3YjOkBOgKJ/H8Gqqys9jz6KUnpDU9Gq88Vq5AsmQW/odaj0m60P2li7oR90jLdqoio2onOULmYG4kK41lieQ8/dHw/DtVLKNqLTqM49C/AxXGtsGgQa0xrXT8M1S8lG1ISuPQ5G1prSNWhjfRZZizIb0SlWH0I09AVUUnqvboEuJ/z7gkb8l819pDmBNpZ78H++kSh5Uq0WGkj6X4TgmtgqqBa7EUQnVF2pWUVZp0nWC8XoEwtdN1vFWaUjjfY3M2Og3Vsn2EMZdAA6t82Af5WZJ0+ePHnypEyh8A9ozLsPbRLyjwAAAABJRU5ErkJggg==") no-repeat;
+  background: url("https://scholarship.bukalapak.com/wp-content/uploads/2018/05/ic_email.png") no-repeat;
   background-size: 16px 10px;
 }
 
@@ -10005,7 +10015,7 @@ a.navbar-item:hover {
   content: "";
   width: 12px;
   height: 12px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVGhD5dlLqE1RHMfx4y2FFEkmHikJKQMlZeSVRx4TA48BJh4DI4pEJqKMZKAM5FlCRErMJAYkJcVIyQRRXpHX9zc4ddr91jl739Y5+3/zq8/kdu7Zv733unevtXajQqbgME5gsX7QH7MJX/G3xWkMQr/IABzEH7SeRJPuTvgMxwW4E2i1DmGjIXMdrnjRR0xEyGjIuNIp1xAuK+HKdqLfC5OheA1XtJPnGIwQ2QZXsqytCJFHcAXLeozaMxmuXFXjUGs2wBWrahZqzXG4YlXV/ky5BFesigeoPXfgypX1CTNRe+7BFSzjPeYjRC7DlezkJaYhTE7CFW3nLEYiVHbAlU25Aq1XwmUuXOGUOQgZTfg+w5V2Qt6NZs7DlXbGI2yWw5V21iNshuAtXPEiPXdCZw9ccUd3MGxGQRsKrniRHobDEDYH4Io7+mzYjEDZtfsvLEHYrIUr7nyAVphhcxuuuPMEupMhMwGaorvizi1oSylk1sCVTtFksi+79GOxG2egnU4dN/tFOQVXOuUcqpzMCrxD8XteYRGyRTvzD1E8UDtXUWatsgv6z+e+Q37jCLLtYmp35A3cwVJeYDpSqfK80pRoDLJkHr7DHSjlC/ZhNJrR2D8G9/l2dGEmIUtWo91QSNEJ3cUNuL+HsvSgnoos2YLU67he0BDPdmeqzJK74T6yZS/cQXplIbJlO+oaZjuRNRvxA+5g3bQA2aMt07LL5By0Odi16KFZdQbQFxfR9cmpphL70a2hdhQ93VPTm6ucd+cnNC+rJbpyq/AMrlxZesk6G7VnIJZB0/tvcGWdp9iMMO/vW6PtpqU4hJvQ8NO2kujVnbZttcCagf8tjcY/2tImBsXPeGQAAAAASUVORK5CYII=") no-repeat;
+  background: url("https://scholarship.bukalapak.com/wp-content/uploads/2018/05/ic_phone.png") no-repeat;
   background-size: 12px 12px;
 }
 
